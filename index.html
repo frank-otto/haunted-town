@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Haunted Town – the 3D Halloween finale</title>
+<meta name="description" content="A cinematic 3D haunted town at night: every game of the Halloween series is its own house. Fly through the misty streets, find your door and play. The clock tower counts down to Halloween.">
+<meta name="theme-color" content="#0b0e1c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8F%9A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-state="intro">
+<canvas id="game" aria-label="Haunted Town – 3D town map of the Halloween games"></canvas>
+<div id="ttl" aria-hidden="true"><b id="ttlMain">HAUNTED TOWN</b><small id="ttlSub"></small></div>
+<div id="banner"></div>
+<div id="hud">
+  <div class="chip" id="hNameBox"><b id="hName"></b></div>
+  <div class="chip" id="hCountBox"><b id="hCount"></b></div>
+</div>
+<div id="top">
+  <button id="btnCalm" class="pill" aria-pressed="false"></button>
+  <button id="btnQ" class="pill"></button>
+  <button id="btnSound" class="pill on" aria-label="Sound">🔊</button>
+  <button id="btnLang" class="pill">DE</button>
+</div>
+<button id="btnSkip" class="pill" data-t="skip"></button>
+<button id="btnSoundHint" class="pill" data-t="tapSound"></button>
+<div id="dock">
+  <button id="btnTour" class="pill big"></button>
+  <span class="chip" id="tourChip"></span>
+  <button id="btnList" class="pill big" data-t="list"></button>
+  <span class="chip" id="hCandyBox"><b id="hCandy"></b></span>
+  <button id="btnOpening" class="pill" data-t="opening"></button>
+</div>
+<div id="help"></div>
+<div id="tip"></div>
+<section id="card" role="dialog" aria-live="polite">
+  <button id="cClose" class="x" aria-label="Close">✕</button>
+  <div class="cTop"><span id="cEmoji"></span><div><b id="cTitle"></b><small id="cDay"></small></div></div>
+  <p id="cSub"></p>
+  <a id="cPlay" class="play" target="_blank" rel="noopener"></a>
+  <p id="cLocked"></p>
+  <div class="cNav"><button id="cPrev" class="pill" aria-label="Previous house">◀</button><button id="cNext" class="pill" aria-label="Next house">▶</button></div>
+</section>
+<section id="list" role="dialog">
+  <div class="lHead"><b id="listTitle"></b><button id="listClose" class="x" aria-label="Close">✕</button></div>
+  <ol id="listItems"></ol>
+  <p class="credit" data-t="credit"></p>
+</section>
+<div id="toast"></div>
+<script src="js/game.bundle.js"></script>
+<script src="js/sounds-src.js" defer></script>
+</body>
+</html>
